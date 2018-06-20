@@ -10,7 +10,7 @@ Link: http://orteil.dashnet.org/cookieclicker/
 ## How to start
 
 1. Go to [Cookie Clicker](http://orteil.dashnet.org/cookieclicker/).
-2. Paste the source in the console.
+2. Paste [the script](https://github.com/alexanderpp/cookie-clicker-bot/blob/master/clicker.js) in the console.
 3. Start the clicker:
 
 ```javascript
