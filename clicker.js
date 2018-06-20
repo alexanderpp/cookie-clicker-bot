@@ -4,7 +4,7 @@ let clicker = {
 	nextThingToBuy: undefined,
 
 	start: function(){
-		this.clickerId = setInterval(() => {document.getElementById("bigCookie").click()}, 100)
+		this.clickerId = setInterval(() => {document.getElementById("bigCookie").click()}, 1)
 		this.repeaterId = setInterval(() => {
 			this.buy()
 
