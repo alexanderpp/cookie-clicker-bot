@@ -8,9 +8,9 @@ let clicker = {
 		this.repeaterId = setInterval(() => {
 			this.buy()
 
-			let shimmers = document.querySelector(".shimmers");
-				if(shimmers) shimmers.click()
-		}, 1000)
+			let shimmer = document.querySelector(".shimmer");
+				if(shimmer) shimmer.click()
+		}, 100)
 	},
 
 	stop: function(){
