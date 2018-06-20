@@ -91,7 +91,7 @@ let clicker = {
 	},
 
 	getNextUpgradePrice(){
-		return Game.UpgradesInStore[0].getPrice()
+		return Game.UpgradesInStore[0] ? Game.UpgradesInStore[0].getPrice() : Infinity
 	},
 
 	getNextUpgradeName(){
