@@ -1,6 +1,7 @@
 let clicker = {
 	clickerId: 0,
 	repeterId: 0,
+	makeItRainId: 0,
 	nextThingToBuy: undefined,
 
 	start: function(){
@@ -16,6 +17,7 @@ let clicker = {
 	stop: function(){
 		clearInterval(this.clickerId)
 		clearInterval(this.repeaterId)
+		clearInterval(this.makeItRainId)
 	},
 
 	buy: function(){
@@ -111,6 +113,18 @@ let clicker = {
 	},
 	
 	showMeTheMoney(){
-		Game.earn(1000000000000000000000)
+		Game.Earn(1000000000000000000000000000)
+	},
+	
+	makeItRain(){
+		this.makeItRainId = setInterval(() => {
+			Game.Earn(1000000000000000000000000000)
+		}, 20)	
+	},
+	
+	breakTheBank(){
+		Game.Earn(Infinity)
 	}
+	
+	
 }
