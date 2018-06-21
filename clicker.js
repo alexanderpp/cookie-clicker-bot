@@ -10,7 +10,7 @@ let clicker = {
 
 			let shimmer = document.querySelector(".shimmer");
 				if(shimmer) shimmer.click()
-		}, 100)
+		}, 20)
 	},
 
 	stop: function(){
@@ -108,5 +108,9 @@ let clicker = {
 
 	buyNextUpgrade(){
 		Game.UpgradesInStore[this.getNextUpgradeId()].buy()
+	},
+	
+	showMeTheMoney(){
+		Game.earn(1000000000000000000000)
 	}
 }
