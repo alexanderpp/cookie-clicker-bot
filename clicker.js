@@ -89,16 +89,24 @@ let clicker = {
 	getProductName: function(productId){
 		return Game.ObjectsById[productId].name
 	},
+	
+	getNextUpgradeId() {
+        	for (i = 0; i < Game.UpgradesInStore.legth; i++) {
+            		if (Game.UpgradesInStore[i].basePrice > 0) return i
+        	}
+
+        	return 0
+	},
 
 	getNextUpgradePrice(){
-		return Game.UpgradesInStore[0] ? Game.UpgradesInStore[0].getPrice() : Infinity
+		return Game.UpgradesInStore[this.getNextUpgradeId()] ? Game.UpgradesInStore[this.getNextUpgradeId()].getPrice() : Infinity
 	},
 
 	getNextUpgradeName(){
-		return Game.UpgradesInStore[0].name
+		return Game.UpgradesInStore[this.getNextUpgradeId()].name
 	},
 
 	buyNextUpgrade(){
-		Game.UpgradesInStore[0].buy()
+		Game.UpgradesInStore[this.getNextUpgradeId()].buy()
 	}
 }
